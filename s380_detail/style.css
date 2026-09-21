@@ -1,0 +1,814 @@
+/* RESET / BASE */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Pretendard, "Noto Sans KR", Arial, sans-serif;
+    color: #17212d;
+    background: #f5f7f9;
+    line-height: 1.65;
+}
+
+
+/* 공통 레이아웃 */
+
+.wrap {
+    width: min(1650px, calc(100% - 48px));
+    margin: auto;
+}
+
+section {
+    padding: 150px 0;
+}
+
+.section-dark {
+    background: #07111e;
+    color: #eef5ff;
+}
+
+.section-slate {
+    background: #1a1a1a;
+    color: #eef5ff;
+}
+
+.section-light {
+    background: #f5f7f9;
+}
+
+
+/* 공통 */
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    font-weight: 800;
+    color: #8c9299;
+    margin: 0 0 22px;
+}
+
+.blue {color: #007cff;}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(48px, 6vw, 65px);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: clamp(38px, 4.2vw, 60px);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+    margin-bottom: 24px;
+}
+
+.lead {
+    max-width: 660px;
+    color: #aebdcd;
+    font-size: 17px;
+}
+
+.lead.small {
+    font-size: 16px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 960px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: url(./assets/s380.png) no-repeat center / cover;
+}
+
+.hero-grid,
+.split {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    align-items: center;
+}
+
+
+/* KEY FEATURES*/
+
+.features h2,
+.quality h2,
+.architecture h2,
+.spec h2 {
+    color: #111b27;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+    border-top: 1px solid #d8dee5;
+    border-left: 1px solid #d8dee5;
+}
+
+.feature-grid article {
+    padding: 38px 30px;
+    min-height: 210px;
+    border-right: 1px solid #d8dee5;
+    border-bottom: 1px solid #d8dee5;
+    background: #fff;
+}
+
+.feature-grid i {
+    font-style: normal;
+    font-size: 15px;
+    color: #6a7683;
+    font-weight: 800;
+}
+
+.feature-grid h3 {
+    margin: 28px 0 10px;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+}
+
+.feature-grid p {
+    font-size: 14px;
+    color: #6a7683;
+}
+
+
+/* ========================================
+   COMMON IMAGE CARD
+======================================== */
+
+.image-card {
+    margin: 0;
+    background: #0b1724;
+    padding: 14px;
+    box-shadow:
+        0 30px 80px #0004;
+}
+
+.image-card img,
+.wide-source img {
+    width: 100%;
+    display: block;
+}
+
+.image-card figcaption {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: #72869b;
+    padding: 14px 4px 2px;
+}
+
+/* ========================================
+   CENTER TEXT
+======================================== */
+
+.center {
+    text-align: center;
+}
+
+.center > p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6d7883;
+}
+
+/* quality 고품질원재료  */
+.quality {
+    background: #fff;
+}
+
+.quality-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 60px;
+    margin-top: 65px;
+
+    align-items: center;
+}
+
+.pale {
+    background: #eef1f4;
+    box-shadow: none;
+}
+
+.quality-list > div,
+.tech-list > div {
+    display: flex;
+    gap: 20px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #dce1e6;
+}
+
+.quality-list b {
+    font-size: 11px;
+    color: #007cff;
+}
+
+.quality-list span,
+.tech-list span {
+    font-size: 13px;
+    color: #68737f;
+}
+
+.quality-list strong,
+.tech-list strong {
+    display: block;
+    color: #17212d;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+
+/* verified 보안 한국형 구름 os */
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: end;
+}
+
+.section-head > p {
+    max-width: 440px;
+    color: #9badbe;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #314050;
+    margin-top: 60px;
+}
+
+.badge-grid div {
+    background: #142333;
+    background: #292929;
+    padding: 34px 28px;
+}
+
+.badge-grid > div:not(:last-of-type) {
+    border-right: 1px solid #3e3e3e;
+}
+
+.badge-grid strong {
+    display: block;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.badge-grid span {
+    font-size: 12px;
+    color: #91a5b9;
+}
+
+.wide-source {
+    margin: 45px 0 0;
+    max-height: 400px;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+/* module-section / 하나의 S380,필요한 방식으로 확장 */
+.module-section {
+    background: #fff;
+}
+
+.module-section .wrap {
+    margin: 0 auto;
+}
+
+.module-title {
+    margin-bottom: 65px;
+}
+
+.title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.title-row h2 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -.045em;
+    color: #111a24;
+}
+
+.title-desc {
+    margin: 0 0 5px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #7b858e;
+}
+
+.module-visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #202830;
+}
+
+.module-item {
+    min-width: 0;
+    padding-top: 28px;
+}
+
+.module-item + .module-item {
+    margin-left: 30px;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 88%;
+    height: 88%;
+    display: block;
+    object-fit: contain;
+    transition: transform .4s ease;
+}
+
+.module-item:hover .product-image img {
+    transform: scale(1.025);
+}
+
+
+/* PRODUCT TITLE */
+
+.product-info {
+    padding: 25px 3px 26px;
+}
+
+.product-title span {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: #89939c;
+}
+
+.product-title h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -.035em;
+    color: #111b25;
+}
+
+.product-info > p {
+    min-height: 48px;
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 1.75;
+    word-break: keep-all;
+    color: #68737d;
+}
+
+
+/* SPEC */
+
+.product-spec {
+    border-top: 1px solid #d9dee2;
+}
+
+.product-spec dl {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 15px;
+
+    margin: 0;
+    padding: 14px 3px;
+
+    border-bottom: 1px solid #e5e8eb;
+}
+
+.product-spec dt,
+.product-spec dd {
+    margin: 0;
+}
+
+.product-spec dt {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: #9aa3ab;
+}
+
+.product-spec dd {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #313b44;
+}
+
+/* 스펙 */
+
+.spec {
+    background: #fff;
+}
+
+.spec-list {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin: 50px 0 0;
+    border-top: 2px solid #222;
+}
+
+.spec-list dt,
+.spec-list dd {
+    margin: 0;
+    padding: 24px 28px;
+    border-bottom: 1px solid #dce1e5;
+    box-sizing: border-box;
+}
+
+.spec-list dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    border-right: 1px solid #dce1e5;
+}
+
+.spec-list dd {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4f5963;
+}
+
+
+/* PROOF 현장에서 입증된 S380의 신뢰성 */
+
+.proof {
+    padding: 130px 0 120px;
+    background: #151515;
+    color: #ffffff;
+}
+
+/* HEAD */
+.proof-head {
+    max-width: 720px;
+    margin-bottom: 65px;
+}
+
+.proof-head .eyebrow {
+    margin-bottom: 22px;
+}
+
+.proof-head h2 {
+    font-weight: 700;
+    color: #fbfbfc;
+}
+
+.proof-intro {
+    max-width: 600px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #898d91;
+}
+
+.proof-evidence {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 55px;
+    padding-top: 55px;
+    border-top: 1px solid #2f2f2f;
+}
+
+/* 실제 현장 사진 */
+
+.proof-visual {
+    position: relative;
+    width: 100%;
+    height: 455px;
+    margin: 0;
+    overflow: hidden;
+    background: #101c28;
+}
+
+.proof-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proof-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 17, 29, 0.08);
+    pointer-events: none;
+}
+
+.proof-visual figcaption {
+    position: absolute;
+    left: 16px;
+    bottom: 13px;
+    z-index: 2;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* 하단 핵심 정보 3개 */
+
+.proof-summary {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    margin-top: 70px;
+    border-top: 1px solid #2f2f2f;
+}
+
+.proof-summary-item {
+    min-height: 150px;
+    padding: 35px 45px 0px;
+}
+
+.proof-summary-item:first-child {
+    padding-left: 0;
+}
+
+.proof-summary-item:last-child {
+    padding-right: 0;
+}
+
+.proof-summary-item + .proof-summary-item {
+    border-left: 1px solid #2f2f2f;;
+}
+
+.proof-summary-item .value {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+}
+
+.proof-summary-item .title {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.proof-summary-item p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #898d91;
+}
+
+
+/* 반응형 */
+@media (max-width: 1000px) {
+
+    .model-expand .wrap {
+        width: min(100% - 40px, 720px);
+    }
+
+    .expand-intro {
+        display: block;
+    }
+
+    .expand-intro p {
+        margin-top: 12px;
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-image {
+        height: 320px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .proof {
+        padding: 100px 0;
+    }
+
+    .proof-evidence {
+        grid-template-columns: 1fr 320px;
+        gap: 50px;
+    }
+
+    .proof-visual {
+        width: 320px;
+        height: 190px;
+    }
+
+    .proof-summary-item {
+        padding: 0 25px;
+    }
+
+    .module-section .wrap {
+        width: calc(100% - 40px);
+    }
+
+    .title-row {
+        display: block;
+    }
+
+    .title-desc {
+        margin-top: 20px;
+    }
+
+    .module-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .module-item {
+        padding: 35px 0;
+    }
+
+    .module-item + .module-item {
+        margin-left: 0;
+        border-top: 1px solid #d9dee2;
+    }
+
+    .product-image {
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    section {
+        padding: 80px 0;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-grid,
+    .split,
+    .quality-layout,
+    .reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .product-stage {
+        height: 380px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .badge-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-head {
+        display: block;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .proof {
+        padding: 80px 0;
+    }
+
+    .proof-head {
+        margin-bottom: 45px;
+    }
+
+    .proof-head h2 {
+        font-size: 38px;
+    }
+
+    .proof-evidence {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .proof-visual {
+        width: 100%;
+        height: 210px;
+    }
+
+    .proof-summary {
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+        padding-top: 0;
+
+        border-top: 0;
+    }
+
+    .proof-summary-item {
+        min-height: auto;
+
+        padding: 30px 0;
+    }
+
+    .proof-summary-item + .proof-summary-item {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .model-expand {
+        padding: 70px 0;
+    }
+
+    .model-expand .wrap {
+        width: calc(100% - 32px);
+    }
+
+    .model-expand h2 {
+        font-size: 36px;
+    }
+
+    .model-image {
+        height: 240px;
+        padding: 24px;
+    }
+
+    .model-body dl > div {
+        grid-template-columns: 80px 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .wrap {
+        width: min(100% - 30px, 1180px);
+    }
+
+    .feature-grid {grid-template-columns: 1fr;}
+
+    .product-stage {
+        transform: scale(0.8);
+        margin: -30px;
+    }
+
+    .closing h2 {
+        font-size: 42px;
+    }
+
+}
+
